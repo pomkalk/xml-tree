@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="434" Width="678" WindowStartupLocation="CenterScreen">
     <Grid Background="#FF2E48A0">
-        <TreeView x:Name="treeView" Margin="10"/>
+        <TreeView x:Name="treeView" Margin="10" MouseDoubleClick="treeView_MouseDoubleClick"/>
 
     </Grid>
 </Window>

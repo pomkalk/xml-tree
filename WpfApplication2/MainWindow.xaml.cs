@@ -51,19 +51,16 @@ namespace WpfApplication2
                 TreeViewItem item = new TreeViewItem();
                 item.Header = el.Name.ToString()+this.get_attributes(el);
 
-                item.MouseDoubleClick += item_MouseDoubleClick;
-
                 obj.Add(item);
 
                 load_level(el, item.Items);
             }
         }
 
-        void item_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void treeView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            TreeViewItem item = (TreeViewItem)sender;
+            TreeViewItem item = (TreeViewItem)((TreeView)sender).SelectedItem;
             MessageBox.Show(item.Header.ToString());
         }
-
     }
 }
